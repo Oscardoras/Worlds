@@ -1,0 +1,20 @@
+name: Worlds
+version: 1.0.0
+api-version: 1.13
+description: "A simple plugin to manages worlds."
+author: oscardoras
+main: org.bukkitplugin.worlds.WorldsPlugin
+permissions:
+  worlds:
+    default: op
+    children:
+      worlds.command: true
+  worlds.command:
+    default: op
+    children:
+      worlds.command.go: true
+      worlds.command.world: true
+  worlds.command.go:
+    default: op
+  worlds.command.world:
+    default: op

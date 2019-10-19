@@ -1,0 +1,16 @@
+command.go=Teleportation to the world %arg%
+command.world.build=The world %arg% has been built
+command.world.create=The world %arg% has been created
+command.world.delete=The world %arg% has been deleted
+command.world.list.empty=There are no worlds
+command.world.list.list=There are %list% worlds:
+command.world.load=The world %arg% has been loaded
+command.world.players.empty=There are no players in the world %arg%:
+command.world.players.list=There are %list% players in the world %arg%:
+command.world.reload=The world %arg% has been reloaded
+command.world.unload=The world %arg% has been unloaded
+world.already_exists=§cThe world %arg% already exists
+world.already_loaded=§cThe world %arg% is already loaded
+world.does_not_exist=§cThe world '%arg%' was not found
+world.incorrect_seed=§cThe seed is incorrect
+world.unloaded=The world has been unloaded from the server

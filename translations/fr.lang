@@ -1,0 +1,16 @@
+command.go=Téléportation vers le monde %arg%
+command.world.build=Le monde %arg% a été construit
+command.world.create=Le monde %arg% a été créé
+command.world.delete=Le monde %arg% a été suprimé
+command.world.list.empty=Il n'y a pas de monde
+command.world.list.list=Il y a %list% monde(s) :
+command.world.load=Le monde %arg% a été chargé
+command.world.players.empty=Il n'y a pas de joueur dans le monde %arg% :
+command.world.players.list=Il y a %list% joueur(s) dans le monde %arg% :
+command.world.reload=Le monde %arg% a été rechargé"
+command.world.unload=Le monde %arg% a été déchargé
+world.already_exists=§cLe monde %arg% existe déjà
+world.already_loaded=§cLe monde %arg% est déjà chargé
+world.does_not_exist=§cLe monde "%arg%" n'a pas été trouvé
+world.incorrect_seed=§cLa graine est incorrecte
+world.unloaded=Le monde a été déchargé du serveur
