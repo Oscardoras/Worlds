@@ -12,5 +12,6 @@ command.world.unload=The world %arg% has been unloaded
 world.already_exists=§cThe world %arg% already exists
 world.already_loaded=§cThe world %arg% is already loaded
 world.does_not_exist=§cThe world '%arg%' was not found
+world.incorrect_generator_settings=§cThe generator settings are incorrect
 world.incorrect_seed=§cThe seed is incorrect
 world.unloaded=The world has been unloaded from the server

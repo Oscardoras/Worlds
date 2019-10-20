@@ -12,5 +12,6 @@ command.world.unload=Le monde %arg% a été déchargé
 world.already_exists=§cLe monde %arg% existe déjà
 world.already_loaded=§cLe monde %arg% est déjà chargé
 world.does_not_exist=§cLe monde "%arg%" n'a pas été trouvé
+world.incorrect_generator_settings=§cTLes options de génération sont incorrectes
 world.incorrect_seed=§cLa graine est incorrecte
 world.unloaded=Le monde a été déchargé du serveur

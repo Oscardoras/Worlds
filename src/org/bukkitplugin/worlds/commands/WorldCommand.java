@@ -20,7 +20,6 @@ import org.bukkitutils.command.v1_14_3_V1.Argument;
 import org.bukkitutils.command.v1_14_3_V1.CommandRegister;
 import org.bukkitutils.command.v1_14_3_V1.CommandRegister.CommandExecutorType;
 import org.bukkitutils.command.v1_14_3_V1.LiteralArgument;
-import org.bukkitutils.command.v1_14_3_V1.arguments.GreedyStringArgument;
 import org.bukkitutils.command.v1_14_3_V1.arguments.StringArgument;
 import org.bukkitutils.command.v1_14_3_V1.arguments.WorldArgument;
 
@@ -136,33 +135,7 @@ public final class WorldCommand {
 						try {
 							long seed = Long.parseLong((String) cmd.getArg(1));
 							if (seed != 0) worldCreator.seed(seed);
-							cmd.broadcastMessage(new Message("command.world.create", worldCreator.name()));
-							return 1;
-						} catch (IllegalArgumentException e) {
-							cmd.sendFailureMessage(new Message("world.incorrect_seed", (String) cmd.getArg(1)));
-							return 0;
-						}
-					} else {
-						cmd.sendFailureMessage(new Message("world.already_exists", (String) cmd.getArg(0)));
-						return 0;
-					}
-				});
-				
-				arguments.put("generatorSettings", new GreedyStringArgument());
-				CommandRegister.register("world", arguments, new Permission("worlds.command.world"), CommandExecutorType.ALL, (cmd) -> {
-					File folder = new File(WorldsPlugin.plugin.worldContainer + "/" + (String) cmd.getArg(0));
-					if (Bukkit.getWorld((String) cmd.getArg(0)) == null && !WorldsPlugin.plugin.isWorld(folder)) {
-						WorldCreator worldCreator = new WorldCreator((String) cmd.getArg(0));
-						try {
-							worldCreator.type(WorldType.valueOf(worldType.toUpperCase()));
-						} catch (IllegalArgumentException e) {
-							worldCreator.environment(Environment.valueOf(worldType.toUpperCase()));
-						}
-						worldCreator.generateStructures(structures.get(strcuture));
-						try {
-							long seed = Long.parseLong((String) cmd.getArg(1));
-							if (seed != 0) worldCreator.seed(seed);
-							worldCreator.generatorSettings((String) cmd.getArg(2));
+							worldCreator.createWorld();
 							cmd.broadcastMessage(new Message("command.world.create", worldCreator.name()));
 							return 1;
 						} catch (IllegalArgumentException e) {
@@ -189,8 +162,8 @@ public final class WorldCommand {
 				for (Player player : world.getPlayers()) player.kickPlayer(new Message("world.unloaded").getMessage(player));
 				Bukkit.unloadWorld(world, world.isAutoSave());
 			}
-			new File(folder.getName() + "/session.lock").delete();
-			cmd.broadcastMessage(new Message("command.world.create", folder.getName()));
+			new File(folder.getPath() + "/session.lock").delete();
+			cmd.broadcastMessage(new Message("command.world.delete", folder.getName()));
 			return 1;
 		});
 	}
