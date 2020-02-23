@@ -31,7 +31,7 @@ public final class WorldCommand {
 		LinkedHashMap<String, Argument<?>> arguments = new LinkedHashMap<>();
 		arguments.put("list", new LiteralArgument("list"));
 		CommandRegister.register("world", arguments, new Permission("worlds.command.world"), CommandExecutorType.ALL, (cmd) -> {
-			ArrayList<String> list = new ArrayList<String>();
+			List<String> list = new ArrayList<String>();
 			for (World world : Bukkit.getWorlds()) list.add(world.getName());
 			cmd.sendListMessage(list, new Object[] {new Message("command.world.list.list")}, new Object[] {new Message("command.world.list.empty")});
 			return list.size();
@@ -40,7 +40,7 @@ public final class WorldCommand {
 		arguments.put("world", new WorldArgument(new Message("world.does_not_exist")));
 		CommandRegister.register("world", arguments, new Permission("worlds.command.world"), CommandExecutorType.ALL, (cmd) -> {
 			World world = (World) cmd.getArg(0);
-			ArrayList<String> list = new ArrayList<String>();
+			List<String> list = new ArrayList<String>();
 			for (Player player : world.getPlayers()) list.add(player.getName());
 			cmd.sendListMessage(list, new Object[] {new Message("command.world.players.list", world.getName())}, new Object[] {new Message("command.world.players.empty", world.getName())});
 			return list.size();
