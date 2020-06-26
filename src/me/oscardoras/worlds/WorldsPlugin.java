@@ -1,4 +1,4 @@
-package org.bukkitplugin.worlds;
+package me.oscardoras.worlds;
 
 import java.io.File;
 import java.io.IOException;
@@ -14,10 +14,11 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.server.ServerCommandEvent;
-import org.bukkitplugin.worlds.commands.GoCommand;
-import org.bukkitplugin.worlds.commands.WorldCommand;
-import org.bukkitutils.BukkitPlugin;
-import org.bukkitutils.io.ConfigurationFile;
+
+import me.oscardoras.spigotutils.BukkitPlugin;
+import me.oscardoras.spigotutils.io.ConfigurationFile;
+import me.oscardoras.worlds.commands.GoCommand;
+import me.oscardoras.worlds.commands.WorldCommand;
 
 public final class WorldsPlugin extends BukkitPlugin implements Listener {
 	

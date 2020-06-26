@@ -1,6 +1,6 @@
-package org.bukkitplugin.worlds;
+package me.oscardoras.worlds;
 
-import org.bukkitutils.io.TranslatableMessage;
+import me.oscardoras.spigotutils.io.TranslatableMessage;
 
 public class Message extends TranslatableMessage {
 	

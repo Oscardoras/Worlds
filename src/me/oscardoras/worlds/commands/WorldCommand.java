@@ -1,4 +1,4 @@
-package org.bukkitplugin.worlds.commands;
+package me.oscardoras.worlds.commands;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -14,14 +14,15 @@ import org.bukkit.WorldCreator;
 import org.bukkit.WorldType;
 import org.bukkit.entity.Player;
 import org.bukkit.permissions.Permission;
-import org.bukkitplugin.worlds.Message;
-import org.bukkitplugin.worlds.WorldsPlugin;
-import org.bukkitutils.command.v1_15_V1.Argument;
-import org.bukkitutils.command.v1_15_V1.CommandRegister;
-import org.bukkitutils.command.v1_15_V1.LiteralArgument;
-import org.bukkitutils.command.v1_15_V1.CommandRegister.CommandExecutorType;
-import org.bukkitutils.command.v1_15_V1.arguments.StringArgument;
-import org.bukkitutils.command.v1_15_V1.arguments.WorldArgument;
+
+import me.oscardoras.spigotutils.command.v1_16_1_V1.Argument;
+import me.oscardoras.spigotutils.command.v1_16_1_V1.CommandRegister;
+import me.oscardoras.spigotutils.command.v1_16_1_V1.LiteralArgument;
+import me.oscardoras.spigotutils.command.v1_16_1_V1.CommandRegister.CommandExecutorType;
+import me.oscardoras.spigotutils.command.v1_16_1_V1.arguments.StringArgument;
+import me.oscardoras.spigotutils.command.v1_16_1_V1.arguments.WorldArgument;
+import me.oscardoras.worlds.Message;
+import me.oscardoras.worlds.WorldsPlugin;
 
 public final class WorldCommand {
 	private WorldCommand() {}

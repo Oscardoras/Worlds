@@ -1,4 +1,4 @@
-package org.bukkitplugin.worlds.commands;
+package me.oscardoras.worlds.commands;
 
 import java.util.Collection;
 import java.util.LinkedHashMap;
@@ -6,13 +6,14 @@ import java.util.LinkedHashMap;
 import org.bukkit.World;
 import org.bukkit.entity.Entity;
 import org.bukkit.permissions.Permission;
-import org.bukkitplugin.worlds.Message;
-import org.bukkitutils.command.v1_15_V1.Argument;
-import org.bukkitutils.command.v1_15_V1.CommandRegister;
-import org.bukkitutils.command.v1_15_V1.CommandRegister.CommandExecutorType;
-import org.bukkitutils.command.v1_15_V1.arguments.EntitySelectorArgument;
-import org.bukkitutils.command.v1_15_V1.arguments.WorldArgument;
-import org.bukkitutils.command.v1_15_V1.arguments.EntitySelectorArgument.EntitySelector;
+
+import me.oscardoras.spigotutils.command.v1_16_1_V1.Argument;
+import me.oscardoras.spigotutils.command.v1_16_1_V1.CommandRegister;
+import me.oscardoras.spigotutils.command.v1_16_1_V1.CommandRegister.CommandExecutorType;
+import me.oscardoras.spigotutils.command.v1_16_1_V1.arguments.EntitySelectorArgument;
+import me.oscardoras.spigotutils.command.v1_16_1_V1.arguments.WorldArgument;
+import me.oscardoras.spigotutils.command.v1_16_1_V1.arguments.EntitySelectorArgument.EntitySelector;
+import me.oscardoras.worlds.Message;
 
 public final class GoCommand {
 	private GoCommand() {}

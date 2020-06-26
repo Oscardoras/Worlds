@@ -1,14 +1,14 @@
-package org.bukkitplugin.worlds.commands;
+package me.oscardoras.worlds.commands;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.bukkitplugin.worlds.Message;
-import org.bukkitplugin.worlds.WorldsPlugin;
-import org.bukkitutils.command.v1_15_V1.CustomArgument;
-
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
+
+import me.oscardoras.spigotutils.command.v1_16_1_V1.CustomArgument;
+import me.oscardoras.worlds.Message;
+import me.oscardoras.worlds.WorldsPlugin;
 
 public class WorldFolderArgument extends CustomArgument<File> {
 	
